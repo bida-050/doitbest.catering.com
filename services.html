@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do It Best | Order Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #f5f5f5;
+    }
+
+    .top-header .logo img {
+height: 50px;
+    }
+
+    .top-header nav {
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+    }
+
+    .top-header nav a {
+      color: #000;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .top-header nav a:hover {
+      color: #0b7b36;
+    }
+
+    .order-btn {
+      background: #0b7b36;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, #000000 0%, #0b7b36 100%);
+      color: white;
+      padding: 20px 30px;
+      font-size: 2rem;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .menu-card {
+      width: 300px;
+      height: 220px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu-label {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 10px;
+      font-weight: 600;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .top-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      header {
+        font-size: 2rem;
+        padding: 20px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        padding: 15px 20px;
+      }
+
+      .menu-card {
+        width: 90%;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-header">
+  <div href="index.html" class="logo"><img src="imiges/oglogo.jpg" alt="Do It Best Logo"></div>
+  <nav>
+    <a href="about.html">About Us</a>
+    <a href="order.html">Menu</a>
+    <a href="contact.html">More</a>
+  </nav>
+  <a href="order.html" class="order-btn">Order Online</a>
+</div>
+
+<header>Explore Our DoitBest Catering Menu</header>
+
+<section class="menu-section">
+  <div class="section-title"> Breakfast Delights</div>
+  <div class="card-container">
+    <div class="menu-card" onclick="location.href='breakfast.html'">
+      <img src="imiges/doit pic1.jpg" alt="Breakfast">
+      <div class="menu-label">View Breakfast Menu</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-title"> Lunch Specials</div>
+  <div class="card-container">
+    <div class="menu-card" onclick="location.href='lunch.html'">
+      <img src="https://images.unsplash.com/photo-1606788075761-3f4b6403b8c4?auto=format&fit=crop&w=800&q=80" alt="Lunch">
+      <div class="menu-label">View Lunch Menu</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-title"> Dinner Exquisite</div>
+  <div class="card-container">
+    <div class="menu-card" onclick="location.href='dinner.html'">
+      <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80" alt="Dinner">
+      <div class="menu-label">View Dinner Menu</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="section-title">  Traditional & Special</div>
+  <div class="card-container">
+    <div class="menu-card" onclick="location.href='special.html'">
+      <img src="https://images.unsplash.com/photo-1605478371453-769b30b9b9da?auto=format&fit=crop&w=800&q=80" alt="Special">
+      <div class="menu-label">View Traditional Menu</div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/26771234567" target="_blank" class="whatsapp-button">Chat on WhatsApp</a>
+
+<footer>
+  &copy; 2025 DoitBest Catering. All rights reserved.
+</footer>
+
+</body>
+</html>
