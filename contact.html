@@ -126,33 +126,36 @@
     <p class="copyright">© 2025 DOITBEST. All Rights Reserved.</p>
   </footer>
 <script>
+console.log("JS loaded");
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.querySelector(".contact-form");
 
+  if (!form) {
+    console.log("Form not found");
+    return;
+  }
+
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // stops page reload
+    e.preventDefault();
 
-    const name = form.querySelector("input[type='text']").value.trim();
-    const email = form.querySelector("input[type='email']").value.trim();
-    const phone = form.querySelector("input[type='text']:nth-of-type(2)").value.trim();
-    const message = form.querySelector("textarea").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    // Basic validation
     if (!name || !email || !message) {
-      alert("Please fill in Name, Email, and Message.");
+      alert("Please fill in all required fields.");
       return;
     }
 
     if (!email.includes("@")) {
-      alert("Please enter a valid email address.");
+      alert("Invalid email address.");
       return;
     }
 
-    // Success message
-    alert("Message sent successfully! We will get back to you soon.");
+    alert("Message sent successfully!");
 
-    // Clear form
     form.reset();
   });
 
